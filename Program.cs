@@ -17,7 +17,7 @@
 
 
 // string  UserInputNewWords = new string (Console.ReadLine());
-string [] UserInputNewWords = ["Hello", "2", "world", ":-)"];
+string [] UserInputNewWords = ["Hello", "2", "wor", ":-)"];
 int countSymbol = 0;
 int taskNeed = 3;
 string temp;
@@ -28,14 +28,43 @@ for (int i = 0; i < UserInputNewWords.Length; i++)
     temp = UserInputNewWords[i];
     if (temp.Length <= taskNeed)
     {
-        // countSymbol +=1;
-        System.Console.Write(UserInputNewWords[i] + " ");
+        countSymbol +=1;
+        // System.Console.Write(UserInputNewWords[i] + " ");
+        string [] TempOutputList = CreateNewList(countSymbol, UserInputNewWords[i], outputTask);
+        outputTask =  TempOutputList;
     }
 }
+PrintList(outputTask);
 
-// static void CreateNewList( int countSymbol, string informationForSave)
-// {
-//     string [] TempOutputList = new string [countSymbol-1];
+static string [] CreateNewList( int countSymbol, string informationForSave, string [] outputTask)
+{
+    
+    string [] TempOutputList = new string [countSymbol];
+    for (int i = 0; i < outputTask.Length; i++)
+    {
+        TempOutputList[i] = outputTask[i];
+    }
+    TempOutputList [countSymbol-1] = informationForSave;
+    return TempOutputList;
+}
 
-// }
+static void PrintList(string [] outputTask)
+{
+    System.Console.Write("[ ");
 
+    for (int i = 0; i < outputTask.Length; i++)
+    {
+        if(i< outputTask.Length -1)
+        {
+            System.Console.Write(outputTask[i] +", ");
+
+        }
+        else
+        {
+            System.Console.Write(outputTask[i]);
+        }
+    }
+
+    System.Console.Write(" ]");
+
+}
