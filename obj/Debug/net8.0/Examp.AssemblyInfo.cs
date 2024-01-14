@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Examp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21e717061a83ce5d52df61cd55ac3726cf6fc5e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+447d670b9121340fd6971534d707b005dbed7ebb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Examp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Examp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
